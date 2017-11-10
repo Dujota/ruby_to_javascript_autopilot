@@ -1,7 +1,7 @@
 function getNewCar() {
     var newCar = {
       city: 'Toronto',
-      passenger: 0,
+      passengers: 0,
       gas: 100
     }
   return newCar;
@@ -13,7 +13,7 @@ function addCar(cars, newCar) {
 }
 
 function pickUpPassenger(car) {
-  car.passenger += 1;
+  car.passengers += 1;
   car.gas -= 10;
 }
 
@@ -50,4 +50,22 @@ function drive(car, cityDistance) {
   car.gas -= cityDistance
   console.log('Drove to ' + car.city + ". Remaining gas: " + getGasDisplay(car.gas) + "." );
 
+}
+
+function dropOffPassengers(car) {
+  var previousPassengers = car.passengers
+  car.passengers = 0
+  console.log(  "Dropped off " + previousPassengers + " passengers.");
+}
+
+function act(car) {
+  var distanceBetweenCities = 50
+
+  if (car.gas <20) {
+    fillUpGas(car)
+  } else if (car.passengers < 3) {
+      pickUpPassenger(car)
+  } else if(car.gas < distanceBetweenCities) {
+    return fillUpGas(car)
+  }
 }
