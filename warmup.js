@@ -29,3 +29,12 @@ if (num > 10) {
 } else {
   console.log(num +" must be less than 10.");
 }
+
+
+// 4
+for (var i = 0; i < 10; i++) {
+  console.log("doing the same thing over and over again " + i + " times" );
+}
+
+
+// 5
