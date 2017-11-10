@@ -80,5 +80,4 @@ function add(firstNum, secondNum) {
 }
 
 var amount = add(5, 7)
-
 console.log(amount);
