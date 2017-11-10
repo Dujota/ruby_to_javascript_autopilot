@@ -59,3 +59,9 @@ for (var i = 3; i <= 15; i++) {
   }}
 
   // 8
+
+var containers = ['purse', 'wallet', 'backpack']
+
+containers.forEach(function(container) {
+  console.log(container);
+})
