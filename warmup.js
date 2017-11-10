@@ -38,3 +38,9 @@ for (var i = 0; i < 10; i++) {
 
 
 // 5
+var base = 5
+for (var i = 0; i < 20; i++) {
+  console.log(base + i );
+}
+
+// 6
