@@ -21,23 +21,33 @@ function pickUpPassenger(car) {
 function getDestination(car) {
   switch (car.city) {
     case 'Toronto':
-      return 'Mississauga'
+      return 'Mississauga';
       break;
     case 'Mississauga':
-      return 'London'
+      return 'London';
       break;
     case 'London':
-      return 'Toronto'
+      return 'Toronto';
       break;
   }
 }
 
-function getGasDisplay() {
-
+function getGasDisplay(gasAmount) {
+  return gasAmount + "%";
 }
 
 function fillUpGas(car) {
-  var oldGas = car.gas
-  car.gas = 100
+  var oldGas = car.gas;
+  car.gas = 100;
   console.log("Filled up to " + getGasDisplay(car.gas) + " on gas from " + getGasDisplay(oldGas) + ".");
+}
+
+function drive(car, cityDistance) {
+  if (car.gas < cityDistance) {
+    return fillUpGas(car);
+  }
+  car.city = getDestination(car);
+  car.gas -= cityDistance
+  console.log('Drove to ' + car.city + ". Remaining gas: " + getGasDisplay(car.gas) + "." );
+
 }
