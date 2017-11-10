@@ -44,3 +44,8 @@ for (var i = 0; i < 20; i++) {
 }
 
 // 6
+var total = 0;
+for (var i = 0; i < 100; i++) {
+  total += i;
+}
+console.log(total);
