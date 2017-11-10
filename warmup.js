@@ -65,3 +65,12 @@ var containers = ['purse', 'wallet', 'backpack']
 containers.forEach(function(container) {
   console.log(container);
 })
+
+// 9
+
+function helloWorld() {
+  console.log("Hello World!");
+}
+helloWorld()
+
+// 10
