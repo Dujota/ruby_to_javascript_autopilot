@@ -51,7 +51,7 @@ puts total
   else
     puts "You are too short to ride this rollercoaster."
   end
-en
+
 
 # 8
 containers = ['purse', 'wallet', 'backback']

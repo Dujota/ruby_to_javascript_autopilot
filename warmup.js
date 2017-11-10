@@ -49,3 +49,13 @@ for (var num = 0; num < 100; num++) {
   total += num;
 }
 console.log(total);
+
+// 7
+for (var i = 3; i <= 15; i++) {
+  if (i > 9) {
+    console.log("You can get on the rollercoaster!");
+  } else {
+    console.log("you are too short to ride this rollercoaster!");
+  }}
+
+  // 8
