@@ -68,4 +68,7 @@ function act(car) {
   } else if(car.gas < distanceBetweenCities) {
     return fillUpGas(car)
   }
+  var droveTo = drive(car, distanceBetweenCities)
+  var passengersDropped = dropOffPassengers(car)
+  console.log(droveTo + passengersDropped);
 }
